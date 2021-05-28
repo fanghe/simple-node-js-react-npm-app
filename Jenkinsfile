@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment { 
         CI = 'true'
+        test_secret = credentials('test_secret')
     }
     stages {
         stage('Build') {
